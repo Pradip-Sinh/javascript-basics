@@ -54,10 +54,35 @@
 // console.log(engobj);
 // engobj.work();
 
-let n = 10;
-sum =0;
-for (let i=1; i<=n; i++){
-    sum= sum + i ;
-    console.log(sum);
+/* practice question: You are creating a website for your college . create a class user with & properties ,name & email.
+it also has a method called viewdata () that allows user to view website data.*/
+
+class User {
+    constructor (name, email){
+        this.name=name,
+        this.email=email
+    }
+    viewData(){
+        console.log("view Data");
+    }
 }
+//User 
+const student1 = new User("pradip","pradipsinr");
+const student2= new User ("Ankit","ankit@gmail.com");
+const student3= new User ("vyom","vyom@gmail.com");
+const student4= new User ("siddhu","siddhu@gmail.com");
+const student5= new User ("abhi","abhi@gmail.com");
+
+class Admin extends User {
+    constructor(name,email){
+        super(name,email);
+        
+    }
+    editData(){
+        console.log("Edit data only Admin");// 
+    }
+}
+
+// Admin can changes all the data but user can not change any data
+const admin1= new Admin("Admin","Admin123@gmail.com");
 
